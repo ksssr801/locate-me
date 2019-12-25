@@ -1,0 +1,19 @@
+<center>
+    <h2><u>Locate Me</u></h2>
+    <br><br>
+    <h4><u><i>Upload the address file</i></u></h4>
+    
+    <form method='POST' enctype="multipart/form-data" action="/myapi/insert-address">
+        {% csrf_token %}
+        <input id="addr_file" type="file" name="addr_file"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    {% if file_location %}
+        <a href="{{file_location}}">Download the file with Geo Location.</a>
+    {% endif %}
+    <br>
+    {% if msg %}
+        {{ msg }}
+    {% endif %}    
+</center>
