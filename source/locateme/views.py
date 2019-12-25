@@ -50,7 +50,8 @@ def get_addresses(request):
                         msg = 'Need API key! Currently showing data over dummy data.'
                     else:
                         pass
-                    # dummy result
+                    # dummy result and address, need to be commented in case of havin API Key
+                    # and further below code need to be put under else condition
                     result = {'results': [{'address_components': [{'long_name': 'Dehradun', 'short_name': 'Dehradun', 'types': ['locality', 'political']}, {'long_name': 'Dehradun', 'short_name': 'Dehradun', 'types': ['administrative_area_level_2', 'political']}, {'long_name': 'Uttarakhand', 'short_name': 'UK', 'types': ['administrative_area_level_1', 'political']}, {'long_name': 'India', 'short_name': 'IN', 'types': ['country', 'political']}], 'formatted_address': 'Dehradun, Uttarakhand, India', 'geometry': {'bounds': {'northeast': {'lat': 30.4041936, 'lng': 78.1089305}, 'southwest': {'lat': 30.2466633, 'lng': 77.92533879999999}}, 'location': {'lat': 30.3164945, 'lng': 78.03219179999999}, 'location_type': 'APPROXIMATE', 'viewport': {'northeast': {'lat': 30.4041936, 'lng': 78.1089305}, 'southwest': {'lat': 30.2466633, 'lng': 77.92533879999999}}}, 'place_id': 'ChIJr4jIVsMpCTkRmYdRMsBiNUw', 'types': ['locality', 'political']}], 'status': 'OK'}
                     address = 'Dehradun, Uttarakhand, India'
                     geo_code_dataset = result.get('results', [])
